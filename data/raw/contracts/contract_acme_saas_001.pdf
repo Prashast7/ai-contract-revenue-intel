@@ -1,0 +1,133 @@
+MASTER SOFTWARE SUBSCRIPTION & SERVICES AGREEMENT
+
+This Master Software Subscription and Services Agreement (“Agreement”) is entered into as of 1 January 2024 (“Effective Date”),
+
+BY AND BETWEEN
+
+ACME SaaS Inc., a Delaware corporation with offices at 123 Market Street, San Francisco, California, USA (“Provider”),
+
+AND
+
+BetaCorp Global Ltd., a company incorporated under the laws of England and Wales, with offices at 88 Bishopsgate, London, United Kingdom (“Customer”).
+
+Provider and Customer may be referred to individually as a “Party” and collectively as the “Parties.”
+
+1. DEFINITIONS
+
+1.1 “Authorized Users” means Customer’s employees, contractors, and affiliates authorized to access the Software.
+
+1.2 “Business Day” means any day other than a Saturday, Sunday, or public holiday in the State of California or England.
+
+1.3 “Downtime” means the total accumulated minutes during which the Software is unavailable, excluding Scheduled Maintenance.
+
+1.4 “Scheduled Maintenance” means maintenance performed outside of Customer’s normal business hours with at least seventy-two (72) hours’ prior notice.
+
+1.5 “Subscription Fees” means the fees payable by Customer for access to the Software as specified in Section 4.
+
+2. GRANT OF LICENSE
+
+2.1 License Grant
+Subject to Customer’s compliance with this Agreement, Provider grants Customer a non-exclusive, non-transferable, non-sublicensable right to access and use the Software during the Term solely for Customer’s internal business operations.
+
+2.2 Usage Restrictions
+Customer shall not:
+
+Reverse engineer or decompile the Software
+
+Use the Software to build a competing product
+
+Permit access by unauthorized third parties
+
+3. PROFESSIONAL SERVICES
+
+3.1 Provider shall provide onboarding, configuration, and optional professional services as described in applicable Statements of Work (“SOW”).
+
+3.2 Professional services shall be billed separately and are not included in Subscription Fees unless explicitly stated.
+
+4. FEES AND PAYMENT TERMS
+
+4.1 Subscription Fees
+Customer agrees to pay Provider a subscription fee of USD 12,000 per calendar quarter for up to 500 Authorized Users.
+
+4.2 Overage Fees
+For each Authorized User exceeding the limit, Customer shall pay an additional USD 25 per user per month, invoiced quarterly in arrears.
+
+4.3 Invoicing
+Provider shall invoice Customer at the beginning of each calendar quarter. All invoices shall be payable within thirty (30) days from the invoice date.
+
+4.4 Late Payments
+Amounts not paid when due shall accrue interest at the rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower.
+
+4.5 Taxes
+All fees are exclusive of applicable taxes, duties, or levies, which shall be borne by Customer.
+
+5. SERVICE LEVEL AGREEMENT (SLA)
+
+5.1 Uptime Commitment
+Provider guarantees 99.5% uptime per calendar quarter, excluding Scheduled Maintenance.
+
+5.2 Service Credits
+If uptime falls below 99.5%, Customer shall be entitled to service credits calculated as follows:
+
+Uptime Achieved	Service Credit
+99.0% – 99.49%	5% of quarterly fee
+98.5% – 98.99%	10% of quarterly fee
+Below 98.5%	25% of quarterly fee
+
+5.3 Claim Procedure
+Customer must submit a written claim for service credits within thirty (30) days after the end of the affected quarter.
+
+6. PENALTIES AND ESCALATION
+
+6.1 Repeated SLA Breach
+If Provider fails to meet the SLA for two (2) consecutive quarters, Customer shall be entitled to a financial penalty of USD 2,000 per breach, payable as a cash refund or invoice credit.
+
+6.2 Chronic Failure
+If Provider fails to meet the SLA for three (3) quarters in any rolling twelve (12) month period, Customer may terminate the Agreement for cause upon written notice.
+
+7. DATA PROTECTION AND CONFIDENTIALITY
+
+7.1 Each Party shall protect Confidential Information using reasonable administrative, technical, and physical safeguards.
+
+7.2 Provider shall comply with applicable data protection laws including GDPR and CCPA, where applicable.
+
+8. TERM AND RENEWAL
+
+8.1 Initial Term
+The initial term of this Agreement shall be one (1) year from the Effective Date.
+
+8.2 Automatic Renewal
+This Agreement shall automatically renew for successive one-year terms unless either Party provides written notice of non-renewal at least sixty (60) days prior to the end of the then-current term.
+
+8.3 Renewal Pricing Adjustment
+Upon renewal, Provider may increase Subscription Fees by up to 7% annually, provided written notice is given at least ninety (90) days prior to renewal.
+
+9. TERMINATION
+
+9.1 Termination for Cause
+Either Party may terminate this Agreement for material breach if such breach is not cured within thirty (30) days of written notice.
+
+9.2 Effect of Termination
+Upon termination, all outstanding fees shall become immediately due and payable.
+
+10. LIMITATION OF LIABILITY
+
+Except for willful misconduct or breach of confidentiality, each Party’s aggregate liability shall not exceed twelve (12) months of Subscription Fees paid under this Agreement.
+
+11. GOVERNING LAW AND JURISDICTION
+
+This Agreement shall be governed by the laws of the State of Delaware, without regard to conflict of laws principles.
+
+12. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement between the Parties and supersedes all prior agreements, representations, or understandings.
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+
+ACME SaaS Inc.
+Authorized Signatory: ____________________
+Date: ____________________
+
+BetaCorp Global Ltd.
+Authorized Signatory: ____________________
+Date: ____________________
