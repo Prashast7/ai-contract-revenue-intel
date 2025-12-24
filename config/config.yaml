@@ -1,0 +1,13 @@
+llm:
+  model: claude-3-5-sonnet-20240620
+  temperature: 0.2
+  max_tokens: 2000
+
+paths:
+  contracts_dir: data/raw/contracts
+  invoices_dir: data/raw/invoices
+  output_dir: output
+
+governance:
+  enable_pii_masking: true
+  enable_audit_logs: true

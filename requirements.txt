@@ -1,0 +1,7 @@
+anthropic
+python-dotenv
+pydantic
+PyPDF2
+pandas
+reportlab
+pyyaml
