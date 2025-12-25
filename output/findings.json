@@ -1,0 +1,60 @@
+[
+  {
+    "contract_id": "contract_acme_saas_001",
+    "leakages": [
+      {
+        "invoice_id": "INV-001",
+        "issue_type": "user_overage",
+        "estimated_amount_usd": 3000.0,
+        "confidence": "high",
+        "recommendation": "Bill overage fees for 40 users exceeding the 500 user limit. Calculation: 40 users \u00d7 USD 25/user/month \u00d7 3 months = USD 3,000 for Q1-2024."
+      },
+      {
+        "invoice_id": "INV-001",
+        "issue_type": "sla_penalty",
+        "estimated_amount_usd": 600.0,
+        "confidence": "high",
+        "recommendation": "Apply 5% service credit (USD 600) if customer submits written claim within 30 days after Q1-2024. Uptime of 99.1% falls within the 99.0%-99.49% range requiring 5% of quarterly fee (USD 12,000 \u00d7 5% = USD 600) as service credit."
+      },
+      {
+        "invoice_id": "INV-002",
+        "issue_type": "user_overage",
+        "estimated_amount_usd": 1500.0,
+        "confidence": "high",
+        "recommendation": "Bill overage fees for 20 users exceeding the 500 user limit. Calculation: 20 users \u00d7 USD 25/user/month \u00d7 3 months = USD 1,500 for the quarter."
+      },
+      {
+        "invoice_id": "INV-002",
+        "issue_type": "sla_penalty",
+        "estimated_amount_usd": 1200.0,
+        "confidence": "medium",
+        "recommendation": "Customer may be entitled to 10% service credit (USD 1,200) as uptime was 98.7%, which falls in the 98.5%-98.99% range. Verify if customer submitted written claim within 30 days after Q2-2024 ended. If valid claim exists, issue credit."
+      }
+    ],
+    "risk": {
+      "contract_id": "contract_acme_saas_001",
+      "risk_level": "high",
+      "key_drivers": [
+        "Recurring SLA breaches across multiple quarters (Q1: 99.1%, Q2: 98.7%) indicating deteriorating service quality and potential for termination rights",
+        "Consistent user overage billing failures totaling USD 4,500 across two quarters, representing 18.75% revenue leakage on base subscription",
+        "Approaching consecutive SLA breach threshold (2 quarters) that triggers USD 2,000 penalty and potential termination for cause after 3 quarters",
+        "Service credit exposure of USD 1,800 if customer submits valid claims for both quarters",
+        "Downward uptime trend (99.1% to 98.7%) suggests operational issues requiring immediate attention",
+        "Customer may exercise termination right if SLA failures continue for one more quarter within rolling 12-month period"
+      ],
+      "mitigation_recommendations": [
+        "URGENT: Investigate root cause of declining uptime performance and implement corrective measures to prevent third consecutive SLA breach and customer termination right",
+        "Immediately implement automated user count monitoring and overage billing to capture USD 4,500 in unbilled revenue and prevent future leakage",
+        "Proactively engage customer regarding service quality concerns before they submit formal SLA credit claims (potential USD 1,800 exposure)",
+        "Establish monthly service review meetings with customer to demonstrate commitment to service improvement and rebuild trust",
+        "Deploy real-time usage tracking dashboard to identify overage situations within billing period rather than in arrears",
+        "Consider offering proactive service credits or temporary pricing concessions to retain customer given termination risk exposure",
+        "Document all infrastructure improvements and communicate uptime enhancement roadmap to customer within 30 days",
+        "Implement early warning system for SLA metrics to trigger escalation when uptime drops below 99.3% monthly threshold",
+        "Review and optimize Scheduled Maintenance windows to minimize impact on uptime calculations",
+        "Prepare customer retention strategy including potential contract amendments if uptime issues persist into Q3"
+      ]
+    },
+    "executive_summary": "# EXECUTIVE SUMMARY: ACME SaaS Contract\n\n**Contract ID:** contract_acme_saas_001\n\n---\n\n## FINANCIAL EXPOSURE\n\n**Total Revenue at Risk: $6,300**\n\n- **Unbilled Revenue (Immediate Recovery):** $4,500\n  - Q1-2024: $3,000 in user overage fees (40 users above 500-user limit)\n  - Q2-2024: $1,500 in user overage fees (20 users above limit)\n  - *This represents 18.75% revenue leakage on base subscription*\n\n- **Potential Service Credits (Liability):** $1,800\n  - Q1-2024: $600 credit exposure (99.1% uptime vs. 99.5% SLA)\n  - Q2-2024: $1,200 credit exposure (98.7% uptime vs. 99.5% SLA)\n  - *Credits only apply if customer submits written claims within 30 days*\n\n---\n\n## CONTRACT RISK LEVEL: **HIGH**\n\n**Critical Issue:** Deteriorating service quality is triggering termination rights.\n\n- Service uptime declined from 99.1% to 98.7% over two consecutive quarters\n- One more SLA breach within the next two quarters triggers:\n  - $2,000 contractual penalty\n  - Customer's right to terminate for cause\n  \n**Root Causes:**\n- No automated monitoring for user count overages\n- Operational issues causing consistent uptime failures\n- Reactive rather than proactive customer management\n\n---\n\n## RECOMMENDED ACTIONS\n\n### Immediate (Next 30 Days)\n1. **Bill the $4,500 in overages immediately** \u2013 recover lost revenue from Q1 and Q2\n2. **Launch urgent investigation** into uptime failures and implement fixes before Q3\n3. **Proactively contact customer** about service improvements before they file SLA credit claims\n4. **Deploy automated usage tracking** to prevent future billing failures\n\n### Strategic (Next 90 Days)\n5. **Establish monthly service reviews** with customer to rebuild trust and demonstrate commitment\n6. **Create early warning system** that escalates when uptime drops below 99.3%\n7. **Prepare retention strategy** including potential pricing concessions if needed to prevent termination\n8. **Document and communicate** infrastructure improvement roadmap to customer\n\n**Bottom Line:** We must recover $4,500 in unbilled revenue while simultaneously preventing customer churn. Service quality improvements are non-negotiable to avoid termination and protect this account's ongoing revenue stream."
+  }
+]

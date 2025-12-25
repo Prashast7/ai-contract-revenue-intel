@@ -1,0 +1,53 @@
+# EXECUTIVE SUMMARY: ACME SaaS Contract
+
+**Contract ID:** contract_acme_saas_001
+
+---
+
+## FINANCIAL EXPOSURE
+
+**Total Revenue at Risk: $6,300**
+
+- **Unbilled Revenue (Immediate Recovery):** $4,500
+  - Q1-2024: $3,000 in user overage fees (40 users above 500-user limit)
+  - Q2-2024: $1,500 in user overage fees (20 users above limit)
+  - *This represents 18.75% revenue leakage on base subscription*
+
+- **Potential Service Credits (Liability):** $1,800
+  - Q1-2024: $600 credit exposure (99.1% uptime vs. 99.5% SLA)
+  - Q2-2024: $1,200 credit exposure (98.7% uptime vs. 99.5% SLA)
+  - *Credits only apply if customer submits written claims within 30 days*
+
+---
+
+## CONTRACT RISK LEVEL: **HIGH**
+
+**Critical Issue:** Deteriorating service quality is triggering termination rights.
+
+- Service uptime declined from 99.1% to 98.7% over two consecutive quarters
+- One more SLA breach within the next two quarters triggers:
+  - $2,000 contractual penalty
+  - Customer's right to terminate for cause
+  
+**Root Causes:**
+- No automated monitoring for user count overages
+- Operational issues causing consistent uptime failures
+- Reactive rather than proactive customer management
+
+---
+
+## RECOMMENDED ACTIONS
+
+### Immediate (Next 30 Days)
+1. **Bill the $4,500 in overages immediately** – recover lost revenue from Q1 and Q2
+2. **Launch urgent investigation** into uptime failures and implement fixes before Q3
+3. **Proactively contact customer** about service improvements before they file SLA credit claims
+4. **Deploy automated usage tracking** to prevent future billing failures
+
+### Strategic (Next 90 Days)
+5. **Establish monthly service reviews** with customer to rebuild trust and demonstrate commitment
+6. **Create early warning system** that escalates when uptime drops below 99.3%
+7. **Prepare retention strategy** including potential pricing concessions if needed to prevent termination
+8. **Document and communicate** infrastructure improvement roadmap to customer
+
+**Bottom Line:** We must recover $4,500 in unbilled revenue while simultaneously preventing customer churn. Service quality improvements are non-negotiable to avoid termination and protect this account's ongoing revenue stream.
