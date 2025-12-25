@@ -1,0 +1,3 @@
+invoice_id,customer,quarter,base_fee_usd,allowed_users,actual_users,uptime_percent,amount_billed_usd
+INV-001,BetaCorp Global Ltd,Q1-2024,12000,500,540,99.1,12000
+INV-002,BetaCorp Global Ltd,Q2-2024,12000,500,520,98.7,12000

@@ -1,13 +1,16 @@
 llm:
-  model: claude-haiku-4-5-20251001
-  temperature: 0.2
+  extraction_model: claude-haiku-4-5
+  reasoning_model: claude-sonnet-4-5
+  temperature:
+    extraction: 0.1
+    reasoning: 0.2
   max_tokens: 2000
 
 paths:
   contracts_dir: data/raw/contracts
   invoices_dir: data/raw/invoices
-  output_dir: output
+  output_dir: output/
 
 governance:
-  enable_pii_masking: true
+  enable_pii_masking: false
   enable_audit_logs: true

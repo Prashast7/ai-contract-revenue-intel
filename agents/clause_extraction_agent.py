@@ -1,7 +1,3 @@
-
-### Replace the ENTIRE file with this:
-
-
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -14,23 +10,26 @@ from schemas.clause_schema import Clause
 
 
 class ClauseExtractionAgent:
-    def __init__(self, model: str, temperature: float):
+    def __init__(self, model: str, temperature: float, max_tokens: int):
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
             raise RuntimeError("ANTHROPIC_API_KEY not loaded")
 
         self.client = Anthropic(api_key=api_key)
-        self.model = model
-        self.temperature = temperature
+        self.model = model                    # claude-haiku-4-5
+        self.temperature = temperature        # config.llm.temperature.extraction
+        self.max_tokens = max_tokens           # config.llm.max_tokens
 
-    def _extract_json(self, text: str) -> str:
+    def _extract_json_array(self, text: str) -> str:
         """
-        Extract JSON array from LLM output.
+        Extract the first JSON array from LLM output.
         """
-        match = re.search(r"\[\s*{.*}\s*\]", text, re.DOTALL)
+        match = re.search(r"\[\s*{[\s\S]*?}\s*\]", text)
         if not match:
-            raise ValueError(f"LLM did not return JSON:\n{text}")
-
+            raise ValueError(
+                "Claude response did not contain a JSON array.\n"
+                f"Raw response:\n{text}"
+            )
         return match.group(0)
 
     def run(self, contract_text: str) -> List[Clause]:
@@ -39,37 +38,33 @@ class ClauseExtractionAgent:
             "Return ONLY a JSON array. No explanations. No markdown."
         )
 
-        user_prompt = f"""
-Extract enforceable clauses of these types ONLY:
-- payment_term
-- sla
-- penalty
-- renewal
-
-Each clause must follow this schema:
-{{
-  "clause_type": "payment_term | sla | penalty | renewal",
-  "description": string,
-  "amount_or_rate": string | null,
-  "conditions": string | null,
-  "enforceable": boolean
-}}
-
-Contract text:
-{contract_text}
-"""
+        user_prompt = (
+            "Extract enforceable clauses of the following types ONLY:\n"
+            "- payment_term\n"
+            "- sla\n"
+            "- penalty\n"
+            "- renewal\n\n"
+            "Each clause must follow this schema:\n"
+            "{\n"
+            '  "clause_type": "payment_term | sla | penalty | renewal",\n'
+            '  "description": string,\n'
+            '  "amount_or_rate": string | null,\n'
+            '  "conditions": string | null,\n'
+            '  "enforceable": boolean\n'
+            "}\n\n"
+            "Contract text:\n"
+            f"{contract_text}"
+        )
 
         response = self.client.messages.create(
             model=self.model,
             temperature=self.temperature,
-            max_tokens=2000,
+            max_tokens=self.max_tokens,
             system=system_prompt,
             messages=[{"role": "user", "content": user_prompt}],
         )
 
         raw_text = response.content[0].text.strip()
-
-        json_text = self._extract_json(raw_text)
-        parsed = json.loads(json_text)
+        parsed = json.loads(self._extract_json_array(raw_text))
 
         return [Clause(**item) for item in parsed]
